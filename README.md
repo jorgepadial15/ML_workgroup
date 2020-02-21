@@ -10,3 +10,4 @@ Some good resorces:
 
 https://newsonline.library.vanderbilt.edu/2020/01/database-spotlight-oreilly-for-higher-education/
 
+Here there is a good video playlist for python for data sicence: "Python for Data Science Complete Video Course"
