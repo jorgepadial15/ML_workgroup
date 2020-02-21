@@ -13,4 +13,8 @@ Some good resorces:
 
 https://newsonline.library.vanderbilt.edu/2020/01/database-spotlight-oreilly-for-higher-education/
 
-Here there is a good video playlist for python for data sicence: "Python for Data Science Complete Video Course"
+Here there is a good video playlist for python for data sicence: "Python for Data Science Complete Video Course".
+
+For 28th of Frebruary lets try to come to the group meeting with the video lectures of "logistic regression" done and the example programming for that week too! 
+
+See you there! 
