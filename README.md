@@ -1,7 +1,12 @@
 # ML_workgroup
 Here we will start the ML and Deep Learning Workgroup
 
+We will be meeting eery Fridar at 2PM in the Stevenson Library. 
 
+A good course to begin with is the Coursera Machine Learning web course from 
+Stanford.
 
-ML Stanford Course: https://www.coursera.org/learn/machine-learning/home/welcome
-Vanderbilt DS Institute: https://www.vanderbilt.edu/datascience/events/data-science-workshops/
+Some good resorces:
+
+https://newsonline.library.vanderbilt.edu/2020/01/database-spotlight-oreilly-for-higher-education/
+
