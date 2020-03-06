@@ -1,7 +1,7 @@
 # ML_workgroup
 Here we will start the ML and Deep Learning Workgroup
 
-We will be meeting eery Fridar at 2PM in the Stevenson Library. 
+We will be meeting every Friday at 1PM in the Stevenson Library. 
 
 A good course to begin with is the Coursera Machine Learning web course from 
 Stanford:
