@@ -6,3 +6,6 @@ This project is for playing with [San-Francisco Restaurant Scores data](https://
 
 ## Setting environment
 - To improve reproducibility of the project I've created environment.yml file so now everyone can create the same conda environment (details in the resources.md)
+
+## To Do
+- Eliminate duplicate rows in the dataset (unless we want to analyze number of violations)
