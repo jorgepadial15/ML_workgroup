@@ -20,4 +20,8 @@
 
 
 
+## Guides for first ML project
+[Iris 1](https://analyticsindiamag.com/start-building-first-machine-learning-project-famous-dataset/)
+[Iris 2](https://machinelearningmastery.com/machine-learning-in-python-step-by-step/)
+
 
