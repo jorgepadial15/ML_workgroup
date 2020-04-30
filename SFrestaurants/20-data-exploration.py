@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[8]:
+# In[ ]:
 
 
 '''
@@ -11,7 +11,7 @@ i.e. analyzing data sets to summarize their main characteristics, often with vis
 '''
 
 
-# In[1]:
+# In[10]:
 
 
 # Load libraries
@@ -34,7 +34,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-# In[2]:
+# In[28]:
 
 
 # Load dataset
@@ -48,63 +48,34 @@ names = ['business_id', 'business_name', 'business_address', 'business_city',
 dataset = read_csv(filename, names=names, low_memory = False)[1:] #removing the first row with names
 
 #Take a first look at the data
-print(dataset.head())
-
-
-# In[3]:
-
-
-#Statistical distribution
-print(dataset.describe())
-'''
-There is something wrong with business id: number of unique ids != number of unique business names
-Also # of business_names > # of business addresses - several restaurants with same address or some addressses are not listed? 
-We have much less inspection scores than inspections - probably won't be a good metrics
-'''
-
-
-# In[46]:
-
-
-# Transform our 'inspection_date' column to a pandas-understandable format
-print(dataset.head())
-dataset['inspection_date'] = pd.to_datetime(dataset['inspection_date'])
-print(dataset.head())
+dataset.head()
 
 
 # In[20]:
 
 
-#Doesn't work yet
-##I want to see dates of the inspection on a graph
+#Statistical distribution
 '''
-There is no real time, just date
+1. There is something wrong with business id: number of unique ids != number of unique business names 
+-> some business names have several business_id or business_name is not assigned 
+2. Also # of business_names > # of business addresses - several restaurants with same address or some addressses are not listed? 
+We have much less inspection scores than inspections - probably won't be a good metrics
+3. # of business_adresses > business_location. Location can not be a good metrics, although it would be easier to classify and plot. 
+Maybe there is a automatic method how to restore location from the given address
 '''
-print(dataset.head())
+dataset.describe()
+
+
+# In[31]:
+
+
+# Transform our 'inspection_date' column to a pandas-understandable format
+print(dataset['inspection_date'].head().to_csv(index=False))
 dataset['inspection_date'] = pd.to_datetime(dataset['inspection_date'])
-print(dataset.head())
-# print(inspection_date.shape())
-# inspection_count = dataset.groupby('inspection_date').size()
-
-# # inspection_count.reshape(1,-1)
-# print(inspection_count)
-fig, ax = plt.subplots(figsize=(15,10))
-ax.set_xticklabels(inspection_date, rotation=90)
-plt.hist(inspection_date.sort_values())
+print(dataset['inspection_date'].head().to_csv(index=False))
 
 
-# In[45]:
-
-
-#Doesn't work yet
-#Plot data
-fig, ax = plt.subplots(figsize=(15,10))
-inspection_count.plot()
-ax.set_xticklabels(inspection_date, rotation=90)
-plt.show()
-
-
-# In[54]:
+# In[19]:
 
 
 # Learning how to use groupby 
@@ -118,54 +89,52 @@ dataset_bn = dataset.groupby('business_name')
 dataset_bn.first() 
 
 
-# In[11]:
+# In[32]:
 
 
 # Finding the values contained in the "Zzan" group - all inspections for this restaurant
 dataset_bn.get_group('Zzan') 
 
 
-# In[53]:
+# In[34]:
 
 
 # Showing the most recent inspection date for each restaurant
 
 dataset_bn_date = dataset.sort_values('inspection_date').groupby(['business_name']).last()
-print(dataset_bn_date)
+dataset_bn_date
 
 
-# In[ ]:
+# In[35]:
 
 
+#Describing the final dataset for the last inspection for each restaurant
+dataset_bn_date.describe()
 
 
-
-# In[ ]:
-
+# In[52]:
 
 
+#Removing all the unnessesary data columns and columns with NaN for inspection-score
+dataset_bn_date_cropped = dataset_bn_date.drop(columns = ['business_city', 'business_state', 'business_postal_code', 'business_latitude', 'business_longitude', 'business_phone_number', 'inspection_id', 'violation_id', 'risk_category', 'inspection_type', 'business_address'])
+dataset_bn_date_cropped = dataset_bn_date_cropped[dataset_bn_date.inspection_score.notna()]
+dataset_bn_date_cropped.head(20)
 
 
-# In[ ]:
+# In[53]:
 
 
+#Describing cropped and polished dataset
+dataset_bn_date_cropped.describe()
 
 
-
-# In[ ]:
-
+# In[55]:
 
 
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
+'''
+The address column is not easy applicable to ML algoritm. 
+For this attempt I will try to make a prediction on an inspection_score based on existing locations
+This is why I need to remove all non-existing locations'''
+dataset_bn_date_cropped = dataset_bn_date_cropped[dataset_bn_date_cropped.business_location.notna()]
+dataset_bn_date_cropped.describe()
 
