@@ -1,6 +1,6 @@
 # ML_workgroup
 
-This rep is created by a Vanderbilt-based group of students making first steps in Machine Learning. Check out the SFreataurants branch to see progress in our pet project.
+This rep is created by a Vanderbilt-based group of students making first steps in Machine Learning. Check out the SFrestaurants branch to see progress in our pet project.
 
 We meet every other Friday at 1 pm (CST) in the Stevenson Library (in person) or via Zoom. 
 
