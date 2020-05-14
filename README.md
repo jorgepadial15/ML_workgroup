@@ -1,22 +1,17 @@
 # ML_workgroup
-Here we will start the ML and Deep Learning Workgroup
 
-We will be meeting every Friday at 1PM in the Stevenson Library. 
+This rep is created by a Vanderbilt-based group of students making first steps in Machine Learning. Check out the SFreataurants branch to see progress in our pet project.
 
-A good course to begin with is the Coursera Machine Learning web course from 
-Stanford:
+We meet every other Friday at 1 pm (CST) in the Stevenson Library (in person) or via Zoom. 
 
-https://www.coursera.org/learn/machine-learning
+We follow the classic [Andrew Ng's course](https://www.coursera.org/learn/machine-learning).
 
+Feel free to contact us if you want to join!
 
 Some good resorces:
 
-- https://newsonline.library.vanderbilt.edu/2020/01/database-spotlight-oreilly-for-higher-education/
+- There is a good video playlist for python for data science: ["Python for Data Science Complete Video Course"](https://newsonline.library.vanderbilt.edu/2020/01/database-spotlight-oreilly-for-higher-education/).
 
-- Here there is a good video playlist for python for data science: "Python for Data Science Complete Video Course".
+- Using MATLAB for ML: ["Getting Started with MATLAB Machine Learning"](https://learning-oreilly-com.proxy.library.vanderbilt.edu/videos/getting-started-with/9781788999847?autoplay=false)
 
-- Using MATLAB for ML: "Getting Started with MATLAB Machine Learning" [[VIDEO]](https://learning-oreilly-com.proxy.library.vanderbilt.edu/videos/getting-started-with/9781788999847?autoplay=false)
 
-For 28th of Frebruary lets try to come to the group meeting with the video lectures of "logistic regression" done and the example programming for that week too! 
-
-See you there! 
