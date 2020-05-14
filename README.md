@@ -10,7 +10,7 @@ Feel free to contact us if you want to join!
 
 Some good resorces:
 
-- There is a good video playlist for python for data science: ["Python for Data Science Complete Video Course"](https://newsonline.library.vanderbilt.edu/2020/01/database-spotlight-oreilly-for-higher-education/).
+- There is a good video playlist for python for data science: ["Python for Data Science Complete Video Course"](https://learning.oreilly.com/videos/python-for-data/9780135687253).
 
 - Using MATLAB for ML: ["Getting Started with MATLAB Machine Learning"](https://learning-oreilly-com.proxy.library.vanderbilt.edu/videos/getting-started-with/9781788999847?autoplay=false)
 
